@@ -1,0 +1,18 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<project name="${artifactId}">
+    <version position="left"/>
+    <publishDate position="navigation-bottom" format="MM-dd-yyyy"/>
+
+    <poweredBy>
+      <logo img="images/WGT100.gif" name="${artifactId}" href="http://webguitoolkit.org/" />
+    </poweredBy>
+    <body>
+        <menu name="Overview">
+          <item name="Project home" href="index.html"/>
+        </menu>
+        <menu ref="modules"  />
+        <menu ref="reports" />
+    </body>
+</project>
