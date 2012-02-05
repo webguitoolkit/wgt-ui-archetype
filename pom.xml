@@ -13,25 +13,35 @@
 	<artifactId>webguitoolkit-archetype</artifactId>
 	<packaging>jar</packaging>
 	<name>WGTArcheType</name>
-	<version>01.03.13-SNAPSHOT</version>
+	<version>01.03.17</version>
 
 	<description>
         Maven arche type for creating a simple project.
   </description>
 
+	<issueManagement>
+		<system>github</system>
+		<url>https://github.com/webguitoolkit/wgt-ui-archetype/issues</url>
+	</issueManagement>
 
 	<scm>
-		<connection>
-            scm:svn:http://isw600.infoserve.endress.com/svn/Commons/WebGuiToolkit/trunk/WGTArcheType
-        </connection>
-		<developerConnection>
-            scm:svn:http://isw600.infoserve.endress.com/svn/Commons/WebGuiToolkit/trunk/WGTArcheType
-        </developerConnection>
-		<url>
-            http://isw600.infoserve.endress.com:8080/svnwebclient/directoryContent.jsp?url=Commons%2FWebGuiToolkit%2Ftrunk%2FWGTArcheType
-        </url>
+		<connection>scm:git:git@github.com:webguitoolkit/wgt-ui-archetype.git</connection>
+		<developerConnection>scm:git:git@github.com:webguitoolkit/wgt-ui-archetype.git</developerConnection>
+		<url>git@github.com:webguitoolkit/wgt-ui-archetype.git</url>
 	</scm>
-
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.webguitoolkit.maven</groupId>
+				<artifactId>wgt-project-template-dependencies</artifactId>
+				<version>01.00.00</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
 	<build>
 		<extensions>
 			<extension>
@@ -42,13 +52,13 @@
 			<extension>
 				<groupId>org.apache.maven.archetype</groupId>
 				<artifactId>archetype-packaging</artifactId>
-				<version>2.0-alpha-4</version>
+				<version>2.2</version>
 			</extension>
 		</extensions>
 		<plugins>
 			<plugin>
 				<artifactId>maven-archetype-plugin</artifactId>
-				<version>2.0-alpha-4</version>
+				<version>2.2</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
